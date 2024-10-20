@@ -1,0 +1,1 @@
+#todo use Pillow package to process 640 x 480 image
