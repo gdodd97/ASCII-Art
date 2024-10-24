@@ -24,7 +24,10 @@ def tuple_to_array(image):
 pixel_matrix = tuple_to_array(im)
 
 print("Iterating through RGB Values")
-for x in len(pixel_matrix):
-    for y in len(pixel_matrix[x]):
-        pixel = pixel_matrix[x][y]
-        print(pixel)
+#for x in len(pixel_matrix):
+#    for y in len(pixel_matrix[x]):
+#        pixel = pixel_matrix[x][y]
+#        print(pixel)
+for row in pixel_matrix:
+    for element in row:
+        print(element)
