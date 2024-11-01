@@ -1,9 +1,9 @@
 from PIL import Image
 import numpy as np
-im = Image.open("cat.jpg")
+im = Image.open("linux.jpg")
 
 ascii = "`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
-
+im = im.convert("RGB")
 r,g,b = im.getpixel((0,0))
 
 width = im.size[0]
@@ -23,7 +23,8 @@ def array_to_brightness(pixel_matrix):
     for row in pixel_matrix:
         brightness_row = []
         for pixel in row:
-            brightness = round(pixel[0] + pixel[1] + pixel[2] / 3.0)
+            brightness = 0.21*pixel[0] + 0.72*pixel[1] + 0.07*pixel[2]
+            #brightness = round(pixel[0] + pixel[1] + pixel[2] / 3.0)
             brightness_row.append(brightness)
         brightness_matrix.append(brightness_row)
     
